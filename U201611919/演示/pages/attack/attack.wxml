@@ -1,0 +1,10 @@
+<view class='container'>
+ <image class='about-banner'
+ src="/images/gu.jpg"></image>
+ <audio class='playmusic'></audio>
+ <text style='font-size:45rpx'>OVERLORD</text>
+ <text>点评：与空气斗智斗勇的传奇骨生</text>
+ <button class='but1'>播放</button> 
+ <button class='but2'>暂停</button>
+ <text></text>
+</view>

@@ -1,0 +1,10 @@
+<view class='container'>
+ <image class='about-banner'
+ src="/images/ri.jpg"></image>
+ <audio class='playmusic'></audio>
+ <text style='font-size:45rpx'>日常</text>
+ <text>点评：数次回味的大笑之作</text>
+ <button class='but1'>播放</button> 
+ <button class='but2'>暂停</button>
+ <text></text>
+</view>

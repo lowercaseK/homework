@@ -1,0 +1,6 @@
+<view class='container'>
+ <navigator style='display:inline;' url='/pages/weekly/weekly' open-type='navigate' hover-class='nav-hover' class='nav-defalt'>恋爱</navigator>
+<navigator style='display:inline;' url='/pages/attack/attack' open-type='navigate' hover-class='nav-hover' class='nav-defalt'>战斗</navigator>
+ <navigator style='display:inline;' url='/pages/laugh/laugh' open-type='navigate' hover-class='nav-hover' class='nav-defalt'>搞笑</navigator>
+ <navigator style='display:inline;' url='/pages/warm/warm' open-type='navigate' hover-class='nav-hover' class='nav-defalt'>治愈</navigator>
+</view> 

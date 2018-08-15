@@ -1,0 +1,21 @@
+.container{
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-banner{
+  width:375rpx;
+  height:375rpx;
+  border-radius: 50%;
+ 
+}
+.nav-defalt{
+  color: brown;
+}
+.nav-hover{
+  color:aqua;
+}

@@ -1,0 +1,10 @@
+<view class='container'>
+ <image class='about-banner'
+ src="/images/abc.jpg"></image>
+ <view>
+ <text style='font-size:45rpx'>我的动画推荐①</text>
+ </view>
+ 
+ <navigator style='display:inline;' url='/pages/content/content' open-type='navigate' hover-class='nav-hover' class='nav-defalt'>目录</navigator>
+ <text>策划人：孙润里</text>
+</view>
