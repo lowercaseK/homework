@@ -15,8 +15,6 @@ namespace areaCalculation
         {
             InitializeComponent();
         }
-
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
@@ -53,29 +51,19 @@ namespace areaCalculation
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            AreaCalculate t = new AreaCalculate();
             double s = 0;
             if (comboBox1.Text == "三角形")
             {
-                try
-                {
-                    s = 0.5 * (Convert.ToDouble(triLength.Text) * Convert.ToDouble(triHeight.Text));
-                }
-                catch(FormatException)
-                {
-                    MessageBox.Show("请输入正确的数据", "ERROR");
-                    triLength.Clear();
-                    triHeight.Clear();
-                }
-
-                /*s = 0.5 * (Convert.ToDouble(triLength.Text) * Convert.ToDouble(triHeight.Text));
+                s = t.Triangle(Convert.ToDouble(triLength.Text),Convert.ToDouble(triHeight.Text));
                 if (comboBox2.Text == "英寸(inch)")
                 {
                     s = s * 2.54 * 2.54;
-                }*/
+                }
             }
             if (comboBox1.Text == "圆形")
             {
-                s = 3.1415 * (Convert.ToDouble(diameter.Text) * Convert.ToDouble(diameter.Text)) / 4;
+                s = t. Circle(Convert.ToDouble(diameter.Text));
                 if (comboBox2.Text == "英寸(inch)")
                 {
                     s = s * 2.54 * 2.54;
@@ -83,7 +71,7 @@ namespace areaCalculation
             }
             if (comboBox1.Text == "正方形")
             {
-                s = (Convert.ToDouble(square.Text) * Convert.ToDouble(square.Text));
+                s = t.Square(Convert.ToDouble(square.Text));
                 if (comboBox2.Text == "英寸(inch)")
                 {
                     s = s * 2.54 * 2.54;
@@ -91,7 +79,7 @@ namespace areaCalculation
             }
             if (comboBox1.Text == "矩形")
             {
-                s = (Convert.ToDouble(recLength.Text) * Convert.ToDouble(recWide.Text));
+                s = t.Rec(Convert.ToDouble(recLength.Text), Convert.ToDouble(recWide.Text));
                 if (comboBox2.Text == "英寸(inch)")
                 {
                     s = s * 2.54 * 2.54;
@@ -100,5 +88,9 @@ namespace areaCalculation
             area.Text = s.ToString("0.000");
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

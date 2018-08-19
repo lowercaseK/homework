@@ -303,6 +303,7 @@
             this.Location = new System.Drawing.Point(81, 18);
             this.Name = "Form1";
             this.Text = "面积计算器";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.recBox.ResumeLayout(false);
