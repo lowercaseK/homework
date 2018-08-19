@@ -7,6 +7,17 @@ C:\Users\close\source\repos\areaCalculation\areaCalculation\bin\Debug\areaCalcul
 C:\Users\close\source\repos\areaCalculation\areaCalculation\bin\Debug\areaCalculation.pdb
 C:\Users\close\source\repos\areaCalculation\areaCalculation\obj\Debug\areaCalculation.exe
 C:\Users\close\source\repos\areaCalculation\areaCalculation\obj\Debug\areaCalculation.pdb
+<<<<<<< HEAD
+C:\Users\close\Desktop\homework\homework3\areaCalculation\bin\Debug\areaCalculation.exe
+C:\Users\close\Desktop\homework\homework3\areaCalculation\bin\Debug\areaCalculation.pdb
+C:\Users\close\Desktop\homework\homework3\areaCalculation\obj\Debug\areaCalculation.csprojAssemblyReference.cache
+C:\Users\close\Desktop\homework\homework3\areaCalculation\obj\Debug\areaCalculation.Form1.resources
+C:\Users\close\Desktop\homework\homework3\areaCalculation\obj\Debug\areaCalculation.Properties.Resources.resources
+C:\Users\close\Desktop\homework\homework3\areaCalculation\obj\Debug\areaCalculation.csproj.GenerateResource.cache
+C:\Users\close\Desktop\homework\homework3\areaCalculation\obj\Debug\areaCalculation.csproj.CoreCompileInputs.cache
+C:\Users\close\Desktop\homework\homework3\areaCalculation\obj\Debug\areaCalculation.exe
+C:\Users\close\Desktop\homework\homework3\areaCalculation\obj\Debug\areaCalculation.pdb
+=======
 C:\Users\陈俊\Desktop\homework3\homework\homework3\areaCalculation\bin\Debug\areaCalculation.exe
 C:\Users\陈俊\Desktop\homework3\homework\homework3\areaCalculation\bin\Debug\areaCalculation.pdb
 C:\Users\陈俊\Desktop\homework3\homework\homework3\areaCalculation\obj\Debug\areaCalculation.csprojAssemblyReference.cache
@@ -16,3 +27,4 @@ C:\Users\陈俊\Desktop\homework3\homework\homework3\areaCalculation\obj\Debug\a
 C:\Users\陈俊\Desktop\homework3\homework\homework3\areaCalculation\obj\Debug\areaCalculation.csproj.CoreCompileInputs.cache
 C:\Users\陈俊\Desktop\homework3\homework\homework3\areaCalculation\obj\Debug\areaCalculation.exe
 C:\Users\陈俊\Desktop\homework3\homework\homework3\areaCalculation\obj\Debug\areaCalculation.pdb
+>>>>>>> tmp

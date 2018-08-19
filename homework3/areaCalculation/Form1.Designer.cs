@@ -44,14 +44,16 @@
             this.area = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.recBox = new System.Windows.Forms.GroupBox();
             this.squareBox = new System.Windows.Forms.GroupBox();
             this.triBox = new System.Windows.Forms.GroupBox();
             this.circleBox = new System.Windows.Forms.GroupBox();
+            this.radioButtoncm = new System.Windows.Forms.RadioButton();
+            this.radioButtonin = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.recBox.SuspendLayout();
             this.squareBox.SuspendLayout();
@@ -171,7 +173,7 @@
             // 
             // area
             // 
-            this.area.Location = new System.Drawing.Point(81, 53);
+            this.area.Location = new System.Drawing.Point(81, 89);
             this.area.Name = "area";
             this.area.Size = new System.Drawing.Size(100, 21);
             this.area.TabIndex = 15;
@@ -179,7 +181,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 62);
+            this.label7.Location = new System.Drawing.Point(10, 98);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 12);
             this.label7.TabIndex = 16;
@@ -194,18 +196,6 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "选择图形类型：";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "厘米(cm)",
-            "英寸(inch)"});
-            this.comboBox2.Location = new System.Drawing.Point(81, 18);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(82, 20);
-            this.comboBox2.TabIndex = 18;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -219,26 +209,37 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(192, 58);
+            this.label10.Location = new System.Drawing.Point(192, 94);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 16);
             this.label10.TabIndex = 20;
             this.label10.Text = "cm^2";
-            this.label10.Visible = false;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radioButtonin);
+            this.groupBox1.Controls.Add(this.radioButtoncm);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.area);
-            this.groupBox1.Location = new System.Drawing.Point(44, 139);
+            this.groupBox1.Location = new System.Drawing.Point(44, 122);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(259, 86);
+            this.groupBox1.Size = new System.Drawing.Size(275, 129);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(195, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(57, 20);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "确定";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // recBox
             // 
@@ -288,6 +289,29 @@
             this.circleBox.TabStop = false;
             this.circleBox.Visible = false;
             // 
+            // radioButtoncm
+            // 
+            this.radioButtoncm.AutoSize = true;
+            this.radioButtoncm.Checked = true;
+            this.radioButtoncm.Location = new System.Drawing.Point(81, 23);
+            this.radioButtoncm.Name = "radioButtoncm";
+            this.radioButtoncm.Size = new System.Drawing.Size(71, 16);
+            this.radioButtoncm.TabIndex = 26;
+            this.radioButtoncm.TabStop = true;
+            this.radioButtoncm.Text = "厘米(cm)";
+            this.radioButtoncm.UseVisualStyleBackColor = true;
+            this.radioButtoncm.CheckedChanged += new System.EventHandler(this.radioButtoncm_CheckedChanged);
+            // 
+            // radioButtonin
+            // 
+            this.radioButtonin.AutoSize = true;
+            this.radioButtonin.Location = new System.Drawing.Point(81, 54);
+            this.radioButtonin.Name = "radioButtonin";
+            this.radioButtonin.Size = new System.Drawing.Size(83, 16);
+            this.radioButtonin.TabIndex = 27;
+            this.radioButtonin.Text = "英寸(inch)";
+            this.radioButtonin.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -303,7 +327,6 @@
             this.Location = new System.Drawing.Point(81, 18);
             this.Name = "Form1";
             this.Text = "面积计算器";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.recBox.ResumeLayout(false);
@@ -336,7 +359,6 @@
         private System.Windows.Forms.TextBox area;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -344,6 +366,9 @@
         private System.Windows.Forms.GroupBox squareBox;
         private System.Windows.Forms.GroupBox triBox;
         private System.Windows.Forms.GroupBox circleBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton radioButtoncm;
+        private System.Windows.Forms.RadioButton radioButtonin;
     }
 }
 

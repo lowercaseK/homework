@@ -11,6 +11,9 @@ namespace areaCalculation
 {
     public partial class Form1 : Form
     {
+        const double inchTocm = 2.54;
+        double s, k=1;
+
         public Form1()
         {
             InitializeComponent();
@@ -49,48 +52,83 @@ namespace areaCalculation
             }
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void radioButtoncm_CheckedChanged(object sender, EventArgs e)
         {
-            AreaCalculate t = new AreaCalculate();
-            double s = 0;
+            if (radioButtoncm.Checked)
+            {
+                k = 1;
+            }
+            if (radioButtonin.Checked)
+            {
+                k = inchTocm * inchTocm;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AreaCalculate cal = new AreaCalculate();
             if (comboBox1.Text == "三角形")
             {
-                s = t.Triangle(Convert.ToDouble(triLength.Text),Convert.ToDouble(triHeight.Text));
-                if (comboBox2.Text == "英寸(inch)")
+                try
                 {
-                    s = s * 2.54 * 2.54;
+                    s = cal.Triangle(Convert.ToDouble(triLength.Text), Convert.ToDouble(triHeight.Text));
+                    s = s * k;
+                    area.Text = s.ToString("0.000");
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("请输入正确的数据", "ERROR");
+                    triLength.Clear();
+                    triHeight.Clear();
+                    area.Clear();
                 }
             }
             if (comboBox1.Text == "圆形")
             {
-                s = t. Circle(Convert.ToDouble(diameter.Text));
-                if (comboBox2.Text == "英寸(inch)")
+                try
                 {
-                    s = s * 2.54 * 2.54;
+                    s = cal.Circle(Convert.ToDouble(diameter.Text));
+                    s = s * k;
+                    area.Text = s.ToString("0.000");
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("请输入正确的数据", "ERROR");
+                    diameter.Clear();
+                    area.Clear();
                 }
             }
             if (comboBox1.Text == "正方形")
             {
-                s = t.Square(Convert.ToDouble(square.Text));
-                if (comboBox2.Text == "英寸(inch)")
+                try
                 {
-                    s = s * 2.54 * 2.54;
+                    s = cal.Square(Convert.ToDouble(square.Text));
+                    s = s * k;
+                    area.Text = s.ToString("0.000");
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("请输入正确的数据", "ERROR");
+                    square.Clear();
+                    area.Clear();
                 }
             }
             if (comboBox1.Text == "矩形")
             {
-                s = t.Rec(Convert.ToDouble(recLength.Text), Convert.ToDouble(recWide.Text));
-                if (comboBox2.Text == "英寸(inch)")
+                try
                 {
-                    s = s * 2.54 * 2.54;
+                    s = cal.Rec(Convert.ToDouble(recLength.Text), Convert.ToDouble(recWide.Text));
+                    s = s * k;
+                    area.Text = s.ToString("0.000");
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("请输入正确的数据", "ERROR");
+                    recLength.Clear();
+                    recWide.Clear();
+                    area.Clear();
                 }
             }
-            area.Text = s.ToString("0.000");
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
