@@ -16,7 +16,7 @@ def fun(x):
             i+=1
     return flag
 
-z=10000
+z=1000
 a=[]
 i=2
 while i<z:
@@ -34,8 +34,8 @@ for k in range(j):
     x=x+[k]
 
 count=[]
-m=2
-n=0
+m = 2
+n = 0
 while m<=z:
     if fun(m):
         n+=1;
