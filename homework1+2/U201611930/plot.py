@@ -16,7 +16,7 @@ def fun(x):
             i+=1
     return flag
 
-z=1000
+z=10000
 a=[]
 i=2
 while i<z:
